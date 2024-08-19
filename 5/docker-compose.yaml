@@ -1,0 +1,14 @@
+include:
+  - path: 
+    - ./services/clickhouse/docker-compose.clickhouse.yaml
+    - ./compose.clickhouse.yaml
+  - path: 
+    - ./services/kafka/docker-compose.kafka.yaml
+    - ./compose.kafka.yaml
+  - path: 
+    - ./services/spark/docker-compose.spark.yaml
+    - ./compose.spark.yaml
+
+networks:
+  spark:
+    driver: bridge

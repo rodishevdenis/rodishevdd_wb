@@ -1,0 +1,11 @@
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server    
+    ports:
+      - '8123:8123'
+      - '9000:9000'
+    volumes: 
+      - ./configs/config.xml:/etc/clickhouse-server/config.xml
+      - ./configs/users.yaml:/etc/clickhouse-server/users.d/users.yaml
+      - ./configs/data:/var/lib/clickhouse/user_files/datasets
+      - ./log:/var/log

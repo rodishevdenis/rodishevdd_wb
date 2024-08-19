@@ -1,0 +1,4 @@
+services:
+  clickhouse:
+    networks:
+      - spark

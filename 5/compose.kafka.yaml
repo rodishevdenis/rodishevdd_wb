@@ -1,0 +1,7 @@
+services:
+  kafka:
+    networks:
+      - spark
+  zookeeper:
+    networks:
+      - spark

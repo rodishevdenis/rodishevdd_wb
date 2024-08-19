@@ -1,0 +1,9 @@
+services:
+  spark:
+    volumes:
+      - ./apps:/opt/spark/apps
+    networks:
+      - spark
+  spark-worker:
+    networks:
+      - spark
