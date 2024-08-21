@@ -14,7 +14,7 @@ def process(batch_df, batch_id):
     print('batch_id: %s' % batch_id)
     print('')
 
-    df = batch_df.toPandas()
+    df = batch_df.na.replace(['"NaN"'], [''], 'tare_type').toPandas()
     
     # Добавляем объем и записываем в конечную таблицу.
     with Client.from_url(ch_connection_string) as ch:
