@@ -2,4 +2,4 @@
 
 #### DataLens
 
-![pg-reports](./img/DL.png)
+![pg-reports](./img/DL1.png)
