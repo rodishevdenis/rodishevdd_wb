@@ -8,3 +8,6 @@ select
   countIf(shk_id, place_cod = '0') qty_shk_without_pc
 from default.SHKonPlace
 group by 1;
+
+//по дате условие не ставил, так как смотрю за все время
+//но если оно требуется, то можно добавить where dt >= today() - interval "Кол-во дней" day
