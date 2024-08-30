@@ -42,3 +42,6 @@ where 1
 
 #### Нагрузка по ресурсам
 ![png](./img/Нагрузка.PNG)
+
+#### МР на DDL
+https://wh-hard01.kol.wb.ru/wh_reports/db_schema/main/-/merge_requests/671
