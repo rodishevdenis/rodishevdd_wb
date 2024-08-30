@@ -51,7 +51,7 @@ def main():
     # Определяем последнее событие из таблицы Shk_LostPost_not_parsed_itog
     max_dt = client_CH.execute("""
     select max(dt_load)
-    from Shk_LostPost_AS
+    from datamart.Shk_LostPost_AS
     """)
     print(max_dt)
     if max_dt:
@@ -141,14 +141,14 @@ def main():
     # Заливаем подготовленные данные
     client_CH.execute("""
     -- Shk_LostPost_AS/insert into Shk_LostPost_AS
-    insert into Shk_LostPost_AS 
+    insert into datamart.Shk_LostPost_AS 
     select *
     from tmp.itog_for_ins
     """)
     # Делаем OPTIMIZE, чтобы не ждать чистки
     client_CH.execute("""
     -- Shk_LostPost_AS/optimize
-    optimize table Shk_LostPost_AS 
+    optimize table datamart.Shk_LostPost_AS 
     """)
 
 
