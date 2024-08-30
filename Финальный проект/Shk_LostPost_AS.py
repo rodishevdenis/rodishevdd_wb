@@ -13,7 +13,7 @@ default_args = {
 dag = DAG(
     dag_id='Shk_LostPost_AS',
     default_args=default_args,
-    schedule_interval='*/10 * * * *',
+    schedule_interval="@continuous",
     description='Даг обновляет данные в таблице Shk_LostPost_AS, в которой хранятся только активные списания (без оприходований) с последним статусом перед списанием',
     catchup=False,
     max_active_runs=1,
@@ -120,7 +120,7 @@ def main():
       shk_id,
       state_id,
       dt dt_state_id
-    from ShkOnPlace_log
+    from ShkOnPlaceState_log
     where 1
       and shk_id in (select shk_id from tmp.Shk_LostPost_last_order)
       and state_id not in ('WOG','')
